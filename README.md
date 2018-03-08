@@ -2,7 +2,7 @@
 The main aim of this repository is to store the content material to be covered in the advanced Python3 workshop conducted by IEEE NTU student branch
 
 
-The contents which will be covered in this Advanced Python workshop are :
+The **contents** which will be covered in this Advanced Python workshop are :
 1. Blazing fast recap of the previously done concepts
 2. Functions - Declaration and Implementation
 3. Recursive functions - Very short introduction and a few examples. Difference between recursion and iteration
@@ -15,7 +15,7 @@ All the code snippets can be found on my GitHub repository. The link is github.c
 
 
 
-Functions:
+## Functions
 Functions are snippets of code written outside the main function. This is written to reduce the repetition of code. A function can be called multiple times within the
 program. The typical Declaration of a function is done in the following manner
 
@@ -32,7 +32,7 @@ are func_args
 def sayHello():                     #the function sayHello does not require any arguments
     print "Hello World!"
 ```
-
+### Parameters
 Parameters are certain values supplied to the functions so that they can use these values to perform certain actions or operations. These are supplied in the 
 parenthesis in the function declaration after the function name
 
@@ -44,8 +44,8 @@ def numCompare(a,b):
         return 0
 ```
 
-Scope of a variable - There are essentialy 2 kinds of scope - Local and Global. Local scope means that if a value of a particular variable is modified inside 
-the block of a function or such constructs, the global value set does not change. As soon as the control escapes that particular block of execution, the value is restored back to the original one 
+### Scope of a variable
+There are essentialy 2 kinds of scope - Local and Global. Local scope means that if a value of a particular variable is modified inside the block of a function or such constructs, the global value set does not change. As soon as the control escapes that particular block of execution, the value is restored back to the original one 
 
 ```python
 x = 50
@@ -58,8 +58,8 @@ func(x)
 print x 
 ```
 
-Return statement : This particular statement is used to return a certain value from the function. Usually only a single value can be returned. After the return
-statement the control comes out of the particular function and the flow of control moves on.
+### Return statement
+This particular statement is used to return a certain value from the function. Usually only a single value can be returned. After the return statement the control comes out of the particular function and the flow of control moves on.
 
 ```python
 def maximum(x,y):
@@ -71,7 +71,8 @@ def maximum(x,y):
         return y
 ```
 
-Pass : Pass statement is used to indicate an empty block of statements
+### Pass
+Pass statement is used to indicate an empty block of statements
 
 ```python
 def passExmp():
@@ -80,20 +81,21 @@ def passExmp():
 
 Using the pass keyword essentially passes over the control to the next line of code
 
-DATA Structures
+## Data Structures
 
 Data structures are certain programming constructs which are used to store data in a certain manner. Different programming languages make use of different 
 data structures, but Python uses 3 main types of Data structures - LISTS, TUPLES, DICTIONARY
 
 Due to time constraints I will only be demonstrating about Lists, but the logic can be extended to tuples and dictionaries also.
 
-LISTS - List is a linear data stucture where large amount of data is stored in consecutive memory locations. Initialization of a list is very easy.
+### Lists
+List is a linear data stucture where large amount of data is stored in consecutive memory locations. Initialization of a list is very easy.
 
 ```python
 listName = ['Data 1','Data 2'....'Data n']
 ```
 
-To access each element of a list to perform certain operation is called as Traversal. Each element of a list has an index which essentially denotes the 
+To access each element of a list to perform certain operation is called as **Traversal**. Each element of a list has an index which essentially denotes the 
 position of that unique element. Index numbering starts from 0. This implies that the very first element of a list has an index of 0. Each element can be accessed consecutively by using a for loop and the index number as a counter variable.
 
 ```python
