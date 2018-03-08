@@ -19,8 +19,9 @@ Functions:
 Functions are snippets of code written outside the main function. This is written to reduce the repetition of code. A function can be called multiple times within the
 program. The typical Declaration of a function is done in the following manner
 
+```python
 def func_name(func_args):
-    func_body 
+    func_body ```
 
 ''' The code is pretty much self explanatory. It uses a keyword def to define the function. The name of the function is func_name and the arguments taken by the function
 are func_args '''
