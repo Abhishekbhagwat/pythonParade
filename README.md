@@ -208,3 +208,21 @@ signInButton = browser.find_element_by_id('entry-login')
 signInButton.click()
 ```
 
+### Cleaning up and adding it together
+
+Now for the final part. Navigate into the Selenium folder, next click on the webdriver folder. Inside that, click the chrome folder and open the webdriver.py file.
+
+In this file navigate to this part of the code and replace the executable_path value with the path of the folder.
+```python
+ def __init__(self, executable_path="chromedriver", port=0,
+                 options=None, service_args=None,
+                 desired_capabilities=None, service_log_path=None,
+                 chrome_options=None):
+```
+### Finishing up
+
+Now run the code and allow the code to run its magic! Hope y'all can carry away skills from this workshop and had fun. 
+
+# THAT'S ALL FOLKS! 
+
+                
