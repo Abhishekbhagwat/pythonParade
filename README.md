@@ -124,7 +124,7 @@ sudo pip3 install package_name
 ## Automation of NTULearn Login
 Now we will be writing a script to automate the process of signing in into NTULearn using Python and Selenium.
 
-####Requirements
+#### Requirements
 1.Selenium 
 2.Chromedriver https://chromedriver.storage.googleapis.com/index.html?path=2.36/
 3.Chrome Browser (As it is the most used browser!)
