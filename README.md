@@ -125,13 +125,86 @@ sudo pip3 install package_name
 Now we will be writing a script to automate the process of signing in into NTULearn using Python and Selenium.
 
 #### Requirements
-1.Selenium 
-2.Chromedriver https://chromedriver.storage.googleapis.com/index.html?path=2.36/
-3.Chrome Browser (As it is the most used browser!)
+1.Selenium <br>
+2.Chromedriver https://chromedriver.storage.googleapis.com/index.html?path=2.36/<br>
+3.Chrome Browser (As it is the most used browser!)<br>
 
 The first step will be to install pip. Fire up a terminal window and type in 
 ```
 pip3 install selenium
 ```
-if required you can also use the sudo flag before pip3
+if required you can also use the sudo flag before pip3. Make sure you have completed this step before going to the next step.
+
+Now click on the link next to Chromedriver to install the Chrome WebDriver package. This allows us to communicate with the browser.
+
+After installing both fire up idle and save the file as automate.py and place it in the directory where Selenium has been installed. Open up automate.py and start editing.
+
+#### Importing the required modules
+Modules are certain pre-written files which contain certain code to perform the required function. From the module we import certain functions. Alternatively we could import the entire module itself. Now type in the following code
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+```
+
+#### Creating the credential strings
+
+We now have to store our login credentials in the file. To do this we will make use of strings.
+
+```python 
+usernameStr = 'Username'       
+passwordStr = 'Password'
+```
+Copy the above code and paste it into the same file. Replace the text in the ' ' with your username and password
+
+#### Requesting to open Chrome browser
+
+```python
+browser = webdriver.Chrome()
+browser.get(('https://ntulearn.ntu.edu.sg/webapps/login/'))
+```
+I have already added the link to NTULearn. This link can be modified into others also.
+
+#### Inspection of elements of the webpage
+
+Open the link for NTULearn login page and right click on the username field and click on inspect element. Observe the id for that particular field. Repeat the same procedure for the password field and the login field. 
+
+```python
+username = browser.find_element_by_id('user_id')        #username id is user_id
+username.send_keys(usernameStr)                         #this prompt send the data stored in usernameStr to the username field
+password = browser.find_element_by_id('password')       #password id is password
+password.send_keys(passwordStr)                         #this prompt send the data stored in passwordStr to the password field
+```
+
+Now it is the time to click the login button
+
+```python
+signInButton = browser.find_element_by_id('entry-login')    #Login button id is entry-login
+signInButton.click()                                        #this prompt clicks the button
+```
+
+### Adding it all together
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+usernameStr = 'Username'
+passwordStr = 'Password'
+
+browser = webdriver.Chrome()
+browser.get(('https://ntulearn.ntu.edu.sg/webapps/login/'))
+
+username = browser.find_element_by_id('user_id')
+username.send_keys(usernameStr)
+password = browser.find_element_by_id('password')
+password.send_keys(passwordStr)
+
+signInButton = browser.find_element_by_id('entry-login')
+signInButton.click()
+```
 
