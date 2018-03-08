@@ -9,8 +9,7 @@ The **contents** which will be covered in this Advanced Python workshop are :
 4. Data Structures - Declaration and Implementation of the various types of Data Structures like Lists, tuples, dictionary. Elucidation on the primary differences
 between them and also a few in built library functions for the manipulation of these structures.
 5. Usage of pip - Quick intro into syntax of pip for further installation of frameworks
-6. {If time permits} - Basics of Algorithm - Example algorithm of BubbleSort
-
+6. Creating a script to automate login into NTULearn
 All the code snippets can be found on my GitHub repository. The link is github.com/abhishekbhagwat/pythonParade 
 
 
@@ -49,11 +48,9 @@ There are essentialy 2 kinds of scope - Local and Global. Local scope means that
 
 ```python
 x = 50
-
 def func(x):
     x = 1
     print "x is "+ x
-
 func(x)
 print x 
 ```
@@ -114,5 +111,27 @@ for fruit in fruits:        #uses a var fruit to check the presence of an elemen
 
 Another way to do this is to count the number of elements in the list and use a counter variable to iterate over the list. As soon as the counter variable crosses the number of elements present in the list, the loop must break.
 
+## pip
+pip is a package management system used to install and manage software packages written in Python. Many packages can be found in the Python Package Index. Python 2.7.9 and later, and Python 3.4 and later include pip by default. All frameworks and dependencies required by Python can be installed using pip. 
+As we are using Python3 we will be using pip3
+```
+pip3 install package_name
+```
+To run as administrator or provide privileges
+```
+sudo pip3 install package_name
+```
+## Automation of NTULearn Login
+Now we will be writing a script to automate the process of signing in into NTULearn using Python and Selenium.
 
+####Requirements
+1.Selenium 
+2.Chromedriver https://chromedriver.storage.googleapis.com/index.html?path=2.36/
+3.Chrome Browser (As it is the most used browser!)
+
+The first step will be to install pip. Fire up a terminal window and type in 
+```
+pip3 install selenium
+```
+if required you can also use the sudo flag before pip3
 
