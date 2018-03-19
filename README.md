@@ -1,15 +1,60 @@
 # pythonParade
 ## Advanced Python3 workshop conducted by IEEE NTU student branch
 
+### Basic continuation
+We will now continue the last part of yesterday's workshop - Iteration
 
+#### while loop
+```python
+while condition:
+    body
+```
+while loop can be executed infinitely till the condition changes to False. It does not require a fixed number to iterate.
+
+```python
+1. Write a program to continuosly accept the name of a person till the time the name is stop
+```
+#### for loop
+for loop is used to iterate a fixed number of times. There is always a counter variable which is incremented after each iteration. 
+
+```python
+for var in seq:
+    loop body
+```
+Most of the times there is also the usage of the range() function, range() returns a list of va;ues from the start point to end point.
+
+```python
+for i in range(startPoint, endPoint, stepSize):
+    print(i)
+```
+```python
+2. Write a program to crea†e a triangle with * by taking the number of rows as input
+OUTPUT : (Assume input is 5)
+*
+**
+***
+****
+*****
+
+3. Write a program to invert the triange above
+OUTPUT:
+*****
+****
+***
+**
+*
+```
+
+### End of Workshop 1
+
+### Start of Workshop 2
 The **contents** which will be covered in this Advanced Python workshop are :
 1. Blazing fast recap of the previously done concepts
 2. Functions - Declaration and Implementation
-3. Recursive functions - Very short introduction and a few examples. Difference between recursion and iteration
-4. Data Structures - Declaration and Implementation of the various types of Data Structures like Lists, tuples, dictionary. Elucidation on the primary differences
+3. Data Structures - Declaration and Implementation of the various types of Data Structures like Lists, tuples, dictionary. Elucidation on the primary differences
 between them and also a few in built library functions for the manipulation of these structures.
-5. Usage of pip - Quick intro into syntax of pip for further installation of frameworks
-6. Creating a script to automate login into NTULearn
+4. Usage of pip - Quick intro into syntax of pip for further installation of frameworks
+5. Creating a script to automate login into NTULearn
 All the code snippets can be found on my GitHub repository. The link is github.com/abhishekbhagwat/pythonParade 
 
 
