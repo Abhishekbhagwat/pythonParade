@@ -1,7 +1,7 @@
 # pythonParade
-## Advanced Python3 workshop conducted by IEEE NTU student branch
 
-### Basic continuation
+
+### Basic workshop continuation
 We will now continue the last part of yesterday's workshop - Iteration
 
 #### while loop
@@ -47,7 +47,7 @@ OUTPUT:
 
 ### End of Workshop 1
 
-### Start of Workshop 2
+## Advanced Python3 workshop conducted by IEEE NTU student branch
 The **contents** which will be covered in this Advanced Python workshop are :
 1. Blazing fast recap of the previously done concepts
 2. Functions - Declaration and Implementation
