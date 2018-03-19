@@ -147,6 +147,32 @@ for fruit in fruits:        #uses a var fruit to check the presence of an elemen
 
 Another way to do this is to count the number of elements in the list and use a counter variable to iterate over the list. As soon as the counter variable crosses the number of elements present in the list, the loop must break.
 
+#### List Methods and operations
+
+There are certain inbuilt library method which can be used to modify lists to make our tasks very easy. To make this illustration very easy I will perform several operations on the same list.
+
+```python
+import random
+
+mainLst = random.sample(range(10),6)
+print(mainLst)
+
+print(len(mainLst))
+print(max(mainLst))
+print(min(mainLst))
+
+mainLst.append(10)
+print(mainLst)
+
+print(mainLst.index(10))
+
+mainLst.reverse()
+print(mainLst)
+
+mainLst.sort()
+print(mainLst)
+```
+
 ## pip
 pip is a package management system used to install and manage software packages written in Python. Many packages can be found in the Python Package Index. Python 2.7.9 and later, and Python 3.4 and later include pip by default. All frameworks and dependencies required by Python can be installed using pip. 
 As we are using Python3 we will be using pip3
