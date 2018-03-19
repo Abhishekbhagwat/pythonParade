@@ -29,18 +29,35 @@ are func_args
 
 ```python
 def sayHello():                     #the function sayHello does not require any arguments
-    print "Hello World!"
+    print ("Hello World!")
 ```
 ### Parameters
 Parameters are certain values supplied to the functions so that they can use these values to perform certain actions or operations. These are supplied in the 
 parenthesis in the function declaration after the function name
 
 ```python
-def numCompare(a,b):
-    if a>b:
-        return 1
+'''this code illustrates how the return statement is used. An important point to note is that only one value can be returned by a
+function'''
+
+def maximum(x,y):
+    if x>y:
+        return (x)
+    elif x==y:
+        return ("x equals y")
     else:
-        return 0
+        return (y)
+
+x = int(input("Enter the 1st value\n"))
+y = int(input("Enter the 2nd value\n"))
+
+print ("The maximum value is "+str(maximum(x,y)))
+
+
+
+'''Note how the function returns only the largest value. It cannot return multiple values. A very unique case of a string being
+returned is shown in the above function. After the return statement has been executed the control flow comes out of the function
+and returns to the main function'''
+
 ```
 
 ### Scope of a variable
@@ -59,13 +76,20 @@ print x
 This particular statement is used to return a certain value from the function. Usually only a single value can be returned. After the return statement the control comes out of the particular function and the flow of control moves on.
 
 ```python
-def maximum(x,y):
-    if x>y:
-        return x
-    elif x==y:
-        return "x equals y"
-    else:
-        return y
+# this code illustrates the difference between global and local variables and shows how to resolve its scope
+
+x = 50                              #Global variable x = 50
+
+def func(x):
+    x = 1                           #Local variable x = 1; Compiler doesn't recognise the global value of x = 50
+    print ("x is "+ str(x)+" in the function")                #prints value of x = 1
+
+    #control exits from the function. Value of x is restored to 50
+
+func(x)
+
+print ("x is "+str(x)+" outside the function func()")                             #prints value of x = 50
+
 ```
 
 ### Pass
@@ -105,7 +129,7 @@ fruits[2]   #'Orange'
 #to access all elements of the list use a for loop in the following way
 
 for fruit in fruits:        #uses a var fruit to check the presence of an element in list   
-    print fruit             #prints the element stored in the var fruit
+    print (fruit)             #prints the element stored in the var fruit
 
 ```
 
