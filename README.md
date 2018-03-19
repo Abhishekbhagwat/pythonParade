@@ -36,6 +36,49 @@ Parameters are certain values supplied to the functions so that they can use the
 parenthesis in the function declaration after the function name
 
 ```python
+# This code illustrates the passing of parameters to functions and how it is used
+
+# now we compare the two numbers. To do so we will pass the values of a and b to the function numCompare
+
+
+def numCompare(a,b):
+    if a>b:
+        return 1
+    else:
+        return 0
+
+a = int(input("Enter the 1st value\n"))
+b = int(input("Enter the 2nd value\n"))
+
+
+print ("The result of the comparison is "+ str(numCompare(a,b)))         #Function call
+
+```
+
+### Scope of a variable
+There are essentialy 2 kinds of scope - Local and Global. Local scope means that if a value of a particular variable is modified inside the block of a function or such constructs, the global value set does not change. As soon as the control escapes that particular block of execution, the value is restored back to the original one 
+
+```python
+# this code illustrates the difference between global and local variables and shows how to resolve its scope
+
+x = 50                              #Global variable x = 50
+
+def func(x):
+    x = 1                           #Local variable x = 1; Compiler doesn't recognise the global value of x = 50
+    print ("x is "+ str(x)+" in the function")                #prints value of x = 1
+
+    #control exits from the function. Value of x is restored to 50
+
+func(x)
+
+print ("x is "+str(x)+" outside the function func()")                             #prints value of x = 50
+
+```
+
+### Return statement
+This particular statement is used to return a certain value from the function. Usually only a single value can be returned. After the return statement the control comes out of the particular function and the flow of control moves on.
+
+```python
 '''this code illustrates how the return statement is used. An important point to note is that only one value can be returned by a
 function'''
 
@@ -58,37 +101,6 @@ print ("The maximum value is "+str(maximum(x,y)))
 returned is shown in the above function. After the return statement has been executed the control flow comes out of the function
 and returns to the main function'''
 
-```
-
-### Scope of a variable
-There are essentialy 2 kinds of scope - Local and Global. Local scope means that if a value of a particular variable is modified inside the block of a function or such constructs, the global value set does not change. As soon as the control escapes that particular block of execution, the value is restored back to the original one 
-
-```python
-x = 50
-def func(x):
-    x = 1
-    print "x is "+ x
-func(x)
-print x 
-```
-
-### Return statement
-This particular statement is used to return a certain value from the function. Usually only a single value can be returned. After the return statement the control comes out of the particular function and the flow of control moves on.
-
-```python
-# this code illustrates the difference between global and local variables and shows how to resolve its scope
-
-x = 50                              #Global variable x = 50
-
-def func(x):
-    x = 1                           #Local variable x = 1; Compiler doesn't recognise the global value of x = 50
-    print ("x is "+ str(x)+" in the function")                #prints value of x = 1
-
-    #control exits from the function. Value of x is restored to 50
-
-func(x)
-
-print ("x is "+str(x)+" outside the function func()")                             #prints value of x = 50
 
 ```
 
